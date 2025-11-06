@@ -4,6 +4,9 @@ This repository contains the source files for the Acelbyte Website. All content 
 
 Copyright © 2025 Acelbyte. All rights reserved.
 
+## License
+This repository is licensed under a proprietary, closed-source license. See [LICENSE.md](LICENSE.md) for the full terms.
+
 \-\-\-
 
 ## Project overview
@@ -67,13 +70,15 @@ Without prior written permission from Owner, You must not:
 - This license terminates automatically if You breach any term. Upon termination, You must immediately cease use and destroy all copies in Your possession.
 
 10) Governing law and venue
-- This agreement is governed by the laws of the Republic of Indonesia, without regard to conflict‑of‑laws principles. Exclusive venue for disputes shall be the courts located in Indonesia.
+- This agreement is governed by the laws of the Republic of Indonesia, without regard to conflict‑of‑laws principles. Exclusive venue for disputes shall be the courts located in Jakarta, Indonesia.
 
 11) Updates
 - Owner may update these terms at any time. Continued use after an update constitutes acceptance of the updated terms.
 
 12) Contact
 - For permissions, licensing inquiries, or other questions, contact Owner at: acelbyte@gmail.com
+- Address: Curug Sangereng, Kecamatan Kelapa Dua, Kabupaten Tangerang, Banten 15810, Indonesia
+- Powered by Xoeris
 
 \-\-\-
 

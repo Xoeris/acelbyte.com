@@ -50,13 +50,15 @@ The Software is provided “as is” and “as available,” without warranties 
 To the maximum extent permitted by law, Owner will not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for any lost profits, revenues, data, or business opportunities, arising out of or related to your use of the Software.
 
 ## 11. Governing law and venue
-This license is governed by the laws of the Republic of Indonesia, without regard to conflict‑of‑laws principles. Exclusive venue for disputes shall be the courts located in Indonesia.
+This license is governed by the laws of the Republic of Indonesia, without regard to conflict‑of‑laws principles. Exclusive venue for disputes shall be the courts located in Jakarta, Indonesia.
 
 ## 12. Updates
 Owner may update these terms at any time. Your continued use after an update constitutes acceptance of the updated terms.
 
 ## 13. Contact
 For permissions, licensing inquiries, or takedown requests, contact: acelbyte@gmail.com
+Address: Curug Sangereng, Kecamatan Kelapa Dua, Kabupaten Tangerang, Banten 15810, Indonesia
+Powered by Xoeris
 
 ---
 
