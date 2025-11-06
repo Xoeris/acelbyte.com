@@ -1,14 +1,12 @@
----
-permalink: /photography-and-videography
-
----
+permalink: /acelbyte/skills
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Photography and Videography</title>
+    <base href="/">
+    <title>Skills</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap">
@@ -389,7 +387,114 @@ permalink: /photography-and-videography
             scroll-behavior: smooth;
         }
 
+        /* Skills Page Styles */
+        
+        /* Custom Dialog Styles */
+        .custom-dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .custom-dialog-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        .dialog-title {
+            color: #fff;
+            font-family: 'Product Sans', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .dialog-message {
+            color: rgba(255, 255, 255, 0.8);
+            font-family: 'Product Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        
+        .dialog-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .dialog-buttons .btn {
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-family: 'Product Sans', sans-serif;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dialog-buttons .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFD700 !important;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dialog-buttons .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #FFD700 !important;
+        }
+        
+        .dialog-buttons .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+        
+        .dialog-buttons .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px) scale(0.9);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .main-content {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
 
+        .main-content.show {
+            opacity: 1;
+        }
 
         body {
             background: var(--dark-gradient);
@@ -455,6 +560,17 @@ permalink: /photography-and-videography
             width: 100% !important;
             box-sizing: border-box !important;
             margin: 0 !important;
+        }
+        
+        /* Hover animations for skill cards - DISABLED */
+        .skill-card {
+            transition: none !important;
+            cursor: default !important;
+        }
+        
+        .skill-card:hover {
+            transform: none !important;
+            box-shadow: none !important;
         }
         
         /* Override Bootstrap padding classes for card-body to match parent width */
@@ -1333,7 +1449,7 @@ permalink: /photography-and-videography
 
 <body>
     <!-- Main Content -->
-    <div class="main-content show">
+    <div id="mainContent" class="main-content show">
     <nav class="custom-navbar" id="mainNav">
         <div class="nav-container">
             <a href="javascript:void(0)" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="text-decoration: none;">
@@ -1348,7 +1464,7 @@ permalink: /photography-and-videography
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="https://acelbyte.com/skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/coming-soon">Projects</a></li>
                 </ul>
             </div>
@@ -1361,11 +1477,11 @@ permalink: /photography-and-videography
                 <div style="max-width: 600px; text-align: center; margin: 0 auto;">
                     <div class="text-center slide-in-left">
 
-                        <h1 class="fw-bold" style="font-family: 'Product Sans', sans-serif; font-size: 3.5rem; color: white;">Photography</h1>
-                        <p class="text-light" style="font-family: 'Product Sans', sans-serif; font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">Capturing moments through the lens - portraits, landscapes, and creative photography</p>
+                        <h1 class="fw-bold" style="font-family: 'Product Sans', sans-serif; font-size: 3.5rem; color: white;">My Skills & Expertise</h1>
+                        <p class="text-light" style="font-family: 'Product Sans', sans-serif; font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">Discover the diverse range of creative and technical skills I bring to every project</p>
 
                         <div style="margin-top: 2rem;">
-                            <button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 15px 30px; border-radius: 50px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-right: 1rem;" onclick="document.getElementById('photography-showcase').scrollIntoView({behavior: 'smooth'})">View Gallery</button>
+                            <button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 15px 30px; border-radius: 50px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-right: 1rem;" onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'})">Explore Skills</button>
 
                         </div>
                     </div>
@@ -1381,88 +1497,205 @@ permalink: /photography-and-videography
         </div>
     </header>
 
-    <section id="photography-showcase" class="scroll-animate">
+    <section id="skills" class="scroll-animate">
         <div style="max-width: 1200px; margin: 0 auto; padding: 80px 20px; background: var(--dark-gradient); border-radius: 30px; margin-top: 50px;">
-            <div style="display: flex; flex-wrap: wrap; gap: 30px;">
-                <div style="flex: 1; min-width: 300px; text-align: center; margin: 0 auto;">
-                    <p class="fw-bold mb-2" style="color: var(--glow-color); font-family: 'Product Sans', sans-serif;">Portfolio</p>
-                    <h3 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Photographs</h3>
-                    <p class="text-light" style="font-family: 'Product Sans', sans-serif; opacity: 0.8; margin-top: 1rem;">A collection of my photography work</p>
+            <div style="margin-bottom: 2rem;">
+                <div style="max-width: 600px; text-align: center; margin: 0 auto;" class="fade-in-up">
+                    <p class="fw-bold mb-2" style="color: var(--glow-color); font-family: 'Product Sans', sans-serif;">Introduction</p>
+                    <h3 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Skills</h3>
+                    
                 </div>
             </div>
-            <div style="padding: 80px 40px;">
-                <!-- Photographs Section -->
-                <div style="margin-bottom: 60px;" class="scroll-animate">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 20px;">
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph1.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 1" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
+            <div style="padding: 3rem 2rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin: 0 auto;">
+                    <div style="margin-bottom: 2rem; display: flex; flex-direction: column; grid-column: span 2;" class="scroll-animate">
+                        <div class="skill-card" style="width: calc(100% - 40px); margin: 0 40px 20px 0; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
+                            <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column; max-width: 100%;">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--accent-gradient); border-radius: 15px;"></div>
+                                <h5 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Photography</h5>
+                                <p class="text-light" style="opacity: 0.8; margin-bottom: 2rem; flex: 1;">Capturing moments and creating visual stories through professional photography, from portraits to landscapes and commercial work.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="window.location.href='https://acelbyte.com/photography-and-videography'">View Captures →</button>
+                            </div>
                         </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph2.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 2" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
+                    </div>
+                    <div style="margin-bottom: 2rem; display: flex; flex-direction: column; grid-column: span 2;" class="scroll-animate">
+                        <div class="skill-card" style="width: calc(100% - 40px); margin: 0 40px 20px 0; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
+                            <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--secondary-gradient); border-radius: 15px;"></div>
+                                <h5 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Visual Effects</h5>
+                                <p class="text-light" style="opacity: 0.8; margin-bottom: 2rem; flex: 1;">Creating stunning visual effects, motion graphics, and digital compositing for films, commercials, and multimedia projects.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="window.location.href='https://acelbyte.com/visual-effects-and-video-editings'">View Renders →</button>
+                            </div>
                         </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph3.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 3" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
+                    </div>
+                    <div style="margin-bottom: 2rem; display: flex; flex-direction: column; grid-column: span 2;" class="scroll-animate">
+                        <div class="skill-card" style="width: calc(100% - 40px); margin: 0 40px 20px 0; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
+                            <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--primary-gradient); border-radius: 15px;"></div>
+                                <h5 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">CGI and 3D Animation</h5>
+                                <p class="text-light" style="opacity: 0.8; margin-bottom: 2rem; flex: 1;">Creating photorealistic computer-generated imagery and dynamic 3D animations for entertainment, advertising, and architectural visualization.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="window.location.href='https://acelbyte.com/cgi-and-3d-animation'">View Animations →</button>
+                            </div>
                         </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph4.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 4" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
+                    </div>
+                    <div style="margin-bottom: 2rem; display: flex; flex-direction: column; grid-column: span 2;" class="scroll-animate">
+                        <div class="skill-card" style="width: calc(100% - 40px); margin: 0 40px 20px 0; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
+                            <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--accent-gradient); border-radius: 15px;"></div>
+                                <h5 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Programming and Application Development</h5>
+                                <p class="text-light" style="opacity: 0.8; margin-bottom: 2rem; flex: 1;">Building robust software solutions, mobile applications, and desktop programs using modern programming languages and frameworks.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="window.location.href='https://acelbyte.com/programming-and-application-development'">View Projects →</button>
+                            </div>
                         </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph5.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 5" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
-                        </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph6.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 6" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
-                        </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph7.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 7" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
-                        </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph8.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 8" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
-                        </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph9.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 9" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
-                        </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph10.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 10" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
-                        </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph11.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 11" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
-                        </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph12.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 12" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
-                        </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph13.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 13" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
-                        </div>
-                        <div style="position: relative; height: 300px; border-radius: 15px; overflow: hidden; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
-                            <img src="images/photographs/photograph14.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none;" alt="Photograph 14" draggable="false">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4));"></div>
-                            <div style="position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); pointer-events: none; user-select: none;">© Acelbyte</div>
+                    </div>
+                    <div style="margin-bottom: 2rem; display: flex; flex-direction: column; grid-column: span 2;" class="scroll-animate">
+                        <div class="skill-card" style="width: calc(100% - 40px); margin: 0 40px 20px 0; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
+                            <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--secondary-gradient); border-radius: 15px;"></div>
+                                <h5 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Music Composer</h5>
+                                <p class="text-light" style="opacity: 0.8; margin-bottom: 1.5rem;">Creating original musical compositions and soundtracks that enhance storytelling and evoke emotions across various media projects.</p>
+                                
+                                <!-- Custom Music Player Section -->
+                                <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 15px; border: 1px solid rgba(255, 247, 0, 0.2); margin-bottom: 1.5rem;">
+                                    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
+                                        <span class="text-light" style="font-size: 0.9rem; font-family: 'Product Sans', sans-serif;">♪ Faith with Target</span>
+                                        <span style="font-size: 0.8rem; font-family: 'Product Sans', sans-serif; color: #FFD700 !important; margin-left: 0.5rem;">Preview</span>
+                                    </div>
+                                    
+                                    <!-- Hidden Audio Element -->
+                                    <audio id="custom-audio" preload="metadata">
+                                        <source src="songs/faith_with_target.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                    
+                                    <!-- Custom Player Controls -->
+                                     <div class="custom-player" style="background: rgba(0, 0, 0, 0.3); border-radius: 10px; padding: 10px; margin-top: 10px; display: flex; align-items: center; gap: 10px;">
+                                        <button id="play-pause-btn" style="background: #FFD700; border: none; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                            <span style="color: black; font-size: 14px;">▶</span>
+                                        </button>
+                                        <div style="flex: 1; background: rgba(255, 255, 255, 0.2); height: 4px; border-radius: 2px; position: relative; cursor: pointer;" id="progress-container" title="Click to seek or scroll to navigate">
+                                            <div id="progress-bar" style="background: #FFD700; height: 100%; border-radius: 2px; width: 0%; transition: width 0.1s;"></div>
+                                        </div>
+                                        <div id="time-display" style="color: #FFD700; font-size: 10px; font-family: 'Product Sans', sans-serif; min-width: 45px; text-align: center;">0:00 / 0:00</div>
+                                        <div style="display: flex; align-items: center; gap: 5px;">
+                                              <button id="mute-btn" style="background: none; border: none; color: #FFD700; font-size: 12px; cursor: pointer; padding: 2px;">🔊</button>
+                                              <div style="background: rgba(255, 255, 255, 0.2); width: 50px; height: 3px; border-radius: 2px; position: relative; cursor: pointer;" id="volume-container">
+                                                  <div id="volume-bar" style="background: #FFD700; height: 100%; border-radius: 2px; width: 70%; transition: width 0.2s;"></div>
+                                              </div>
+                                          </div>
+                                    </div>
+                                </div>
+                                
+                                <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                     const audio = document.getElementById('custom-audio');
+                                     const playPauseBtn = document.getElementById('play-pause-btn');
+                                     const progressContainer = document.getElementById('progress-container');
+                                     const progressBar = document.getElementById('progress-bar');
+                                     const volumeContainer = document.getElementById('volume-container');
+                                     const volumeBar = document.getElementById('volume-bar');
+                                     const muteBtn = document.getElementById('mute-btn');
+                                     const timeDisplay = document.getElementById('time-display');
+                                     
+                                     // Format time helper function
+                                     function formatTime(seconds) {
+                                         if (isNaN(seconds)) return '0:00';
+                                         const mins = Math.floor(seconds / 60);
+                                         const secs = Math.floor(seconds % 60);
+                                         return mins + ':' + (secs < 10 ? '0' : '') + secs;
+                                     }
+                                     
+                                     // Initialize time display with fallback
+                                     timeDisplay.textContent = '0:00 / 3:00';
+                                     
+                                     let isPlaying = false;
+                                     let isMuted = false;
+                                     let previousVolume = 0.7;
+                                    
+                                    // Play/Pause functionality
+                                    playPauseBtn.addEventListener('click', function() {
+                                        if (isPlaying) {
+                                            audio.pause();
+                                            playPauseBtn.innerHTML = '<span style="color: black; font-size: 14px;">▶</span>';
+                                            isPlaying = false;
+                                        } else {
+                                            audio.play().catch(function(error) {
+                                                console.log('Play failed:', error);
+                                            });
+                                            playPauseBtn.innerHTML = '<span style="color: black; font-size: 14px;">⏸</span>';
+                                            isPlaying = true;
+                                        }
+                                    });
+                                    
+                                    // Progress bar update
+                                    audio.addEventListener('timeupdate', function() {
+                                        if (audio.duration) {
+                                            const progress = (audio.currentTime / audio.duration) * 100;
+                                            progressBar.style.width = progress + '%';
+                                            timeDisplay.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+                                        }
+                                    });
+                                    
+                                    // Update time display when metadata loads
+                                     audio.addEventListener('loadedmetadata', function() {
+                                         timeDisplay.textContent = '0:00 / ' + formatTime(audio.duration);
+                                     });
+                                     
+                                     // Handle audio loading errors
+                                     audio.addEventListener('error', function(e) {
+                                         timeDisplay.textContent = 'Audio unavailable';
+                                     });
+                                    
+                                    // Progress bar click
+                                    progressContainer.addEventListener('click', function(e) {
+                                        const rect = progressContainer.getBoundingClientRect();
+                                        const clickX = e.clientX - rect.left;
+                                        const width = rect.width;
+                                        const clickRatio = Math.max(0, Math.min(1, clickX / width));
+                                        const newTime = clickRatio * (audio.duration || 180);
+                                        
+                                        if (audio.duration && !isNaN(audio.duration)) {
+                                            audio.currentTime = newTime;
+                                        }
+                                    });
+                                    
+                                    // Volume control
+                                    volumeContainer.addEventListener('click', function(e) {
+                                        const rect = volumeContainer.getBoundingClientRect();
+                                        const clickX = e.clientX - rect.left;
+                                        const width = rect.width;
+                                        const volume = clickX / width;
+                                        audio.volume = Math.max(0, Math.min(1, volume));
+                                        volumeBar.style.width = (volume * 100) + '%';
+                                    });
+                                    
+                                    // Reset when audio ends
+                                    audio.addEventListener('ended', function() {
+                                        playPauseBtn.innerHTML = '<span style="color: black; font-size: 14px;">▶</span>';
+                                        isPlaying = false;
+                                        progressBar.style.width = '0%';
+                                    });
+                                    
+                                    // Mute/Unmute functionality
+                                     muteBtn.addEventListener('click', function() {
+                                         if (isMuted) {
+                                             audio.volume = previousVolume;
+                                             volumeBar.style.width = (previousVolume * 100) + '%';
+                                             muteBtn.innerHTML = '🔊';
+                                             isMuted = false;
+                                         } else {
+                                             previousVolume = audio.volume;
+                                             audio.volume = 0;
+                                             volumeBar.style.width = '0%';
+                                             muteBtn.innerHTML = '🔇';
+                                             isMuted = true;
+                                         }
+                                     });
+                                     
+                                     // Set initial volume
+                                     audio.volume = 0.7;
+                                 });
+                                </script>
+                                
+                                <button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto; margin-bottom: 1rem;" type="button" onclick="showMusicRedirectDialog()">Listen More →</button>
+                                <button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="window.location.href='https://acelbyte.com/music-composer-and-audio-production'">VIEW MUSIC →</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1653,6 +1886,27 @@ permalink: /photography-and-videography
                     this.style.boxShadow = '0 20px 40px rgba(255, 247, 0, 0.2)';
                 });
             });
+            
+            // Hover effects for skill cards - DISABLED
+            // const skillCards = document.querySelectorAll('.skill-card');
+            // skillCards.forEach(card => {
+            //     card.addEventListener('mouseenter', function() {
+            //         this.style.transform = 'translateY(-15px) scale(1.03)';
+            //         this.style.boxShadow = '0 25px 50px rgba(255, 247, 0, 0.3)';
+            //     });
+            //     
+            //     card.addEventListener('mouseleave', function() {
+            //         this.style.transform = 'translateY(0) scale(1)';
+            //         this.style.boxShadow = '0 20px 40px rgba(255, 247, 0, 0.2)';
+            //     });
+            // });
+            
+            // Ensure skill cards have no hover effects
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.style.transition = 'none';
+                card.style.cursor = 'default';
+            });
         }
 
         // Initialize all effects when DOM is loaded
@@ -1723,7 +1977,79 @@ permalink: /photography-and-videography
             lastMouseMove = now;
         });
 
-
+        // Skills Page Initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize scroll animations and other page functionality
+            const mainContent = document.getElementById('mainContent');
+            if (mainContent) {
+                mainContent.classList.add('show');
+            }
+            
+            // Initialize music player functionality
+            const musicPlayer = document.getElementById('music-player');
+            const durationDisplay = document.getElementById('duration-display');
+            
+            if (musicPlayer && durationDisplay) {
+                // Format time in minutes:seconds
+                function formatTime(seconds) {
+                    const minutes = Math.floor(seconds / 60);
+                    const remainingSeconds = Math.floor(seconds % 60);
+                    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+                }
+                
+                // Update duration when metadata is loaded
+                musicPlayer.addEventListener('loadedmetadata', function() {
+                    durationDisplay.textContent = formatTime(musicPlayer.duration);
+                });
+                
+                // Update current time during playback
+                musicPlayer.addEventListener('timeupdate', function() {
+                    durationDisplay.textContent = formatTime(musicPlayer.currentTime) + ' / ' + formatTime(musicPlayer.duration);
+                });
+                
+                // Reset display when ended
+                musicPlayer.addEventListener('ended', function() {
+                    durationDisplay.textContent = formatTime(musicPlayer.duration);
+                });
+             }
+        });
+        
+        // Music redirect dialog function
+        function showMusicRedirectDialog() {
+            // Create custom dialog elements
+            const dialogOverlay = document.createElement('div');
+            dialogOverlay.className = 'custom-dialog-overlay';
+            
+            const dialogBox = document.createElement('div');
+            dialogBox.className = 'custom-dialog-box';
+            
+            // Add dialog content
+            dialogBox.innerHTML = `
+                <h4 class="dialog-title">External Redirect</h4>
+                <p class="dialog-message">You are about to be redirected to listen to more music on an external platform. Do you want to continue?</p>
+                <div class="dialog-buttons">
+                    <button class="btn btn-secondary dialog-cancel">Cancel</button>
+                    <button class="btn btn-primary dialog-confirm">Continue</button>
+                </div>
+            `;
+            
+            // Add to DOM
+            dialogOverlay.appendChild(dialogBox);
+            document.body.appendChild(dialogOverlay);
+            
+            // Add event listeners
+            const cancelBtn = dialogBox.querySelector('.dialog-cancel');
+            const confirmBtn = dialogBox.querySelector('.dialog-confirm');
+            
+            cancelBtn.addEventListener('click', () => {
+                document.body.removeChild(dialogOverlay);
+            });
+            
+            confirmBtn.addEventListener('click', () => {
+                window.open('https://sndo.ffm.to/pd8e7rq', '_blank');
+                document.body.removeChild(dialogOverlay);
+            });
+        }
 
         // Custom Hamburger Menu Functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -1754,7 +2080,7 @@ permalink: /photography-and-videography
             });
         });
 
-        // Image protection and download prevention
+        // Comprehensive Download Protection and Developer Tools Prevention
         document.addEventListener('DOMContentLoaded', function() {
             // Disable right-click context menu
             document.addEventListener('contextmenu', function(e) {
@@ -1776,67 +2102,73 @@ permalink: /photography-and-videography
 
             // Disable keyboard shortcuts
             document.addEventListener('keydown', function(e) {
-                // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S, Ctrl+A, Ctrl+P
-                if (e.keyCode === 123 || // F12
-                    (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
-                    (e.ctrlKey && e.shiftKey && e.keyCode === 74) || // Ctrl+Shift+J
-                    (e.ctrlKey && e.keyCode === 85) || // Ctrl+U
-                    (e.ctrlKey && e.keyCode === 83) || // Ctrl+S
-                    (e.ctrlKey && e.keyCode === 65) || // Ctrl+A
-                    (e.ctrlKey && e.keyCode === 80)) { // Ctrl+P
+                // Disable F12 (Developer Tools)
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+Shift+I (Developer Tools)
+                if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+Shift+J (Console)
+                if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+U (View Source)
+                if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+S (Save Page)
+                if (e.ctrlKey && e.key === 's') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+A (Select All)
+                if (e.ctrlKey && e.key === 'a') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+P (Print)
+                if (e.ctrlKey && e.key === 'p') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Print Screen
+                if (e.key === 'PrintScreen') {
                     e.preventDefault();
                     return false;
                 }
             });
 
-            // Disable print screen
-            document.addEventListener('keyup', function(e) {
-                if (e.keyCode === 44) {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-
-            // Additional protection for images
-            const images = document.querySelectorAll('img');
-            images.forEach(function(img) {
-                img.addEventListener('dragstart', function(e) {
-                    e.preventDefault();
-                    return false;
-                });
-                img.addEventListener('contextmenu', function(e) {
-                    e.preventDefault();
-                    return false;
-                });
-                img.style.webkitUserSelect = 'none';
-                img.style.mozUserSelect = 'none';
-                img.style.msUserSelect = 'none';
-                img.style.userSelect = 'none';
-                img.style.webkitTouchCallout = 'none';
-                img.style.webkitUserDrag = 'none';
-                img.style.khtmlUserDrag = 'none';
-                img.style.mozUserDrag = 'none';
-                img.style.oUserDrag = 'none';
-                img.style.userDrag = 'none';
-            });
-
-            // Disable developer tools detection
+            // Developer Tools Detection
             let devtools = {
                 open: false,
                 orientation: null
             };
+            
             const threshold = 160;
+            
             setInterval(function() {
                 if (window.outerHeight - window.innerHeight > threshold || 
                     window.outerWidth - window.innerWidth > threshold) {
                     if (!devtools.open) {
                         devtools.open = true;
-                        console.clear();
-                        document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif; background: #000; color: #fff;"><h1>Developer tools detected. Please close them to continue using the website and restart the browser</h1></div>';
+                        document.body.innerHTML = '<div style="position:fixed;top:0;left:0;width:100%;height:100%;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;z-index:99999;">Developer tools detected. Please close them to continue using the website and restart the browser</div>';
                     }
                 }
             }, 500);
-         });
+        });
     </script>
     </div> <!-- End Main Content -->
   <footer style="font-family: Arial, sans-serif; font-size: 12px; color: #666; text-align: center; padding: 12px 8px; border-top: 1px solid #e0e0e0; margin-top: 24px;">

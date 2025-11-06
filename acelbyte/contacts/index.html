@@ -1,13 +1,12 @@
----
-permalink: /privacy-policy
----
+permalink: /acelbyte/contacts
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Personal Privacy Policy - Acelbyte</title>
+    <base href="/">
+    <title>Contacts</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap">
@@ -867,6 +866,105 @@ permalink: /privacy-policy
             margin-bottom: 3rem !important;
         }
 
+        /* Custom Dialog Styles */
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .dialog-box {
+            background: linear-gradient(135deg, rgba(15, 15, 15, 0.95), rgba(25, 25, 25, 0.9));
+            border: 2px solid rgba(255, 247, 0, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(255, 247, 0, 0.2);
+            animation: slideIn 0.4s ease-out;
+        }
+        
+        .dialog-title {
+            color: #FFF700;
+            font-family: 'Product Sans', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .dialog-message {
+            color: rgba(255, 255, 255, 0.9);
+            font-family: 'Product Sans', sans-serif;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .dialog-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .dialog-buttons .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-family: 'Product Sans', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            margin-bottom: 0 !important;
+        }
+        
+        .dialog-buttons .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFD700 !important;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dialog-buttons .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #FFD700 !important;
+        }
+        
+        .dialog-buttons .btn-primary {
+            background: #FFF700;
+            color: #000;
+        }
+        
+        .dialog-buttons .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px) scale(0.9);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .hamburger-btn {
@@ -1046,7 +1144,7 @@ permalink: /privacy-policy
             margin-bottom: 1rem;
             text-shadow: 0 0 8px rgba(255, 247, 0, 0.3);
         }
-        
+
         .footer-none {
             text-decoration: none;
         }
@@ -1336,7 +1434,7 @@ permalink: /privacy-policy
     <nav class="custom-navbar" id="mainNav">
         <div class="nav-container">
             <a href="javascript:void(0)" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="text-decoration: none;">
-                <img class="nav-logo" width="50" height="50" style="width: 50px;height: 50px;padding-right: 0px;margin-right: 0px;border-radius: 50%; object-fit: cover; background: transparent !important; cursor: pointer;" src="images/logos/logo1.png">
+                <img class="nav-logo" width="35" height="35" style="width: 35px;height: 35px;padding-right: 0px;margin-right: 0px;border-radius: 0%; object-fit: cover; background: transparent !important; cursor: pointer;" src="images/logos/logo1.png">
             </a>
             <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
                 <span class="hamburger-line"></span>
@@ -1360,86 +1458,71 @@ permalink: /privacy-policy
                 <div style="max-width: 600px; text-align: center; margin: 0 auto;">
                     <div class="text-center slide-in-left">
 
-                        <h1 class="fw-bold" style="font-family: 'Product Sans', sans-serif; font-size: 3.5rem; color: white;">Privacy Policy</h1>
-                        <p class="text-light" style="font-family: 'Product Sans', sans-serif; font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">Your privacy is important to me. Learn how I protect and handle your personal information</p>
+                        <h1 class="fw-bold" style="font-family: 'Product Sans', sans-serif; font-size: 3.5rem; color: white;">Contact Me</h1>
+                        <p class="text-light" style="font-family: 'Product Sans', sans-serif; font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">Let's connect and discuss your next project or collaboration</p>
 
                         <div style="margin-top: 2rem;">
-                            <button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 15px 30px; border-radius: 50px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-right: 1rem;" onclick="document.getElementById('privacy-policy').scrollIntoView({behavior: 'smooth'})">Read Policy</button>
+                            <button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 15px 30px; border-radius: 50px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-right: 1rem;" onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
 
                         </div>
                     </div>
                 </div>
-
+                <div style="max-width: 1000px; margin: 0 auto;">
+                    <div class="position-relative slide-in-right" style="display: flex;flex-wrap: wrap;justify-content: flex-start;">
+                        <div style="position: relative;flex: 0 0 auto;transform: translate3d(-15%, 35%, 0);"><div class="glass-dark" style="width: 210px; height: 210px; border-radius: 25px; display: flex; align-items: center; justify-content: center; margin: 20px;"><img class="img-fluid" style="border-radius: 25px; filter: brightness(1.2) contrast(1.1); width: 210px; height: 210px; object-fit: cover;" data-bss-parallax="" data-bss-parallax-speed="0.8" src="images/titles/image1.png"></div></div>
+                        <div style="position: relative;flex: 0 0 auto;transform: translate3d(-5%, 20%, 0);"><div class="glass-dark" style="width: 210px; height: 210px; border-radius: 25px; display: flex; align-items: center; justify-content: center; margin: 20px;"><img class="img-fluid" style="border-radius: 25px; filter: brightness(1.2) contrast(1.1); width: 210px; height: 210px; object-fit: cover;" data-bss-parallax="" data-bss-parallax-speed="0.4" src="images/titles/image2.png"></div></div>
+                        <div style="position: relative;flex: 0 0 auto;transform: translate3d(0, 0%, 0);"><div class="glass-dark" style="width: 210px; height: 210px; border-radius: 25px; display: flex; align-items: center; justify-content: center; margin: 20px;"><img class="img-fluid" style="border-radius: 25px; filter: brightness(1.2) contrast(1.1); width: 210px; height: 210px; object-fit: cover;" data-bss-parallax="" data-bss-parallax-speed="0.25" src="images/titles/image3.png"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="privacy-policy" class="scroll-animate" style="padding-top: 50px;">
+    <section id="skills" class="scroll-animate">
         <div style="max-width: 1200px; margin: 0 auto; padding: 80px 20px; background: var(--dark-gradient); border-radius: 30px; margin-top: 50px;">
             <div style="display: flex; flex-wrap: wrap;">
-                <div style="flex: 1; max-width: 83.33%; margin: 0 auto;" class="fade-in-up">
-                    <div class="text-center mb-2" style="padding: 30px 0;">
-                        <p class="fw-bold mb-2" style="color: var(--glow-color); font-family: 'Product Sans', sans-serif;">		Last Updated: January 2024</p>
-                        <h3 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Privacy Policy</h3>
-                    </div>
+                <div style="flex: 1; max-width: 600px; text-align: center; margin: 0 auto;" class="fade-in-up">
+                    <p class="fw-bold mb-2" style="color: var(--glow-color); font-family: 'Product Sans', sans-serif;">Get in Touch</p>
+                    <h3 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Contacts</h3>
                     
-                    <div class="privacy-content">
-                        <div class="mb-5">
-                            <h4 class="fw-bold text-light mb-3" style="font-family: 'Product Sans', sans-serif; color: var(--glow-color);">1. Information I Collect</h4>
-                            <p class="text-light" style="opacity: 0.9; line-height: 1.6;">I collect information you provide directly when you contact me through this website, inquire about my creative services (visual effects, music composition, programming, CGI/3D animation), or engage with my portfolio. This may include your name, email address, project details, and any messages you send regarding potential collaborations or commissions.</p>
+                </div>
+            </div>
+            <div style="padding: 3rem 1rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 0 auto;">
+                    <div style="margin-bottom: 3rem; grid-column: span 2;" class="scroll-animate visible">
+                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column; width: calc(100% - 40px); margin: 0 auto 20px auto;">
+                            <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--accent-gradient); border-radius: 15px;"></div>
+                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Email</h5>
+                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Reach out to me directly via email for business inquiries, collaborations, or any questions you might have.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="showEmailDialog()">Send Email →</button>
+                            </div>
                         </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="fw-bold text-light mb-3" style="font-family: 'Product Sans', sans-serif; color: var(--glow-color);">2. How I Use Your Information</h4>
-                            <p class="text-light" style="opacity: 0.9; line-height: 1.6;">I use the information I collect to:</p>
-                            <ul class="text-light" style="opacity: 0.9; line-height: 1.6;">
-                                <li>Respond to your project inquiries and provide personalized service quotes</li>
-                                <li>Communicate about ongoing creative projects and collaborations</li>
-                                <li>Share updates about my latest work in visual effects, music, and development</li>
-                                <li>Improve my portfolio website and showcase relevant work</li>
-                                <li>Maintain professional relationships with clients and collaborators</li>
-                            </ul>
+                    </div>
+                    <div style="margin-bottom: 3rem; grid-column: span 2;" class="scroll-animate visible">
+                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column; width: calc(100% - 40px); margin: 0 auto 20px auto;">
+                            <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--secondary-gradient); border-radius: 15px;"></div>
+                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">WhatsApp</h5>
+                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Message me on WhatsApp for quick communication, project discussions, and instant updates.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="showWhatsAppDialog()">Message →</button>
+                            </div>
                         </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="fw-bold text-light mb-3" style="font-family: 'Product Sans', sans-serif; color: var(--glow-color);">3. Information Sharing</h4>
-                            <p class="text-light" style="opacity: 0.9; line-height: 1.6;">I do not sell, trade, or otherwise transfer your personal information to third parties without your explicit consent. As an independent creative professional, I may occasionally work with trusted collaborators or technical service providers who assist with project delivery, but any sharing of information is strictly limited to what's necessary for project completion and is governed by confidentiality agreements.</p>
+                    </div>
+                    <div style="margin-bottom: 2rem; grid-column: span 2;" class="scroll-animate visible">
+                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column; width: calc(100% - 40px); margin: 0 auto 20px auto;">
+                            <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--primary-gradient); border-radius: 15px;"></div>
+                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Instagram</h5>
+                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Follow me on Instagram for behind-the-scenes content, creative projects, and personal updates.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="showInstagramDialog()">Follow →</button>
+                            </div>
                         </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="fw-bold text-light mb-3" style="font-family: 'Product Sans', sans-serif; color: var(--glow-color);">4. Data Security</h4>
-                            <p class="text-light" style="opacity: 0.9; line-height: 1.6;">I implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. All project files and client communications are stored securely with encryption. However, no method of transmission over the internet is 100% secure, and I cannot guarantee absolute security.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="fw-bold text-light mb-3" style="font-family: 'Product Sans', sans-serif; color: var(--glow-color);">5. Cookies and Tracking</h4>
-                            <p class="text-light" style="opacity: 0.9; line-height: 1.6;">My portfolio website may use minimal cookies to enhance your browsing experience and understand how visitors interact with my creative work. Cookies are small files that help me improve the presentation of my projects. You can choose to disable cookies through your browser settings.</p>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="fw-bold text-light mb-3" style="font-family: 'Product Sans', sans-serif; color: var(--glow-color);">6. Your Rights</h4>
-                            <p class="text-light" style="opacity: 0.9; line-height: 1.6;">You have the right to:</p>
-                            <ul class="text-light" style="opacity: 0.9; line-height: 1.6;">
-                                <li>Access and update your personal information</li>
-                                <li>Request deletion of your personal data and project files</li>
-                                <li>Opt-out of project update communications</li>
-                                <li>Request a copy of your data</li>
-                                <li>Withdraw consent for data processing at any time</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="mb-5">
-                            <h4 class="fw-bold text-light mb-3" style="font-family: 'Product Sans', sans-serif; color: var(--glow-color);">7. Contact Information</h4>
-                            <p class="text-light" style="opacity: 0.9; line-height: 1.6;">If you have any questions about this Privacy Policy or my data practices, please contact me directly:</p>
-                            <p class="text-light" style="opacity: 0.9; line-height: 1.6; margin-left: 1rem;">
-                                Email: contact@acelbyte.com<br>
-                                Portfolio: acelbyte.github.io
-                            </p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <h4 class="fw-bold text-light mb-3" style="font-family: 'Product Sans', sans-serif; color: var(--glow-color);">8. Changes to This Policy</h4>
-                            <p class="text-light" style="opacity: 0.9; line-height: 1.6; padding-bottom: 25px;">I may update this Privacy Policy from time to time to reflect changes in my creative services or legal requirements. I will notify you of any significant changes by posting the updated Privacy Policy on this page and updating the "Last Updated" date below.</p>
+                    </div>
+                    <div style="margin-bottom: 2rem; grid-column: span 2;" class="scroll-animate visible">
+                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column; width: calc(100% - 40px); margin: 0 auto 20px auto;">
+                            <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--accent-gradient); border-radius: 15px;"></div>
+                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Calendly</h5>
+                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Book a meeting with me through Calendly to discuss collaborations, projects, or professional opportunities at your convenience.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="showCalendlyDialog()">Book Meeting →</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1543,6 +1626,51 @@ permalink: /privacy-policy
             </div>
         </div>
     </footer>
+    
+    <!-- Custom Dialogs -->
+    <div id="emailDialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <h3 class="dialog-title">Send Email</h3>
+            <p class="dialog-message">Would you like to open your email client to send me a message?</p>
+            <div class="dialog-buttons">
+                <button class="btn btn-secondary dialog-cancel" onclick="hideDialog('emailDialog')">Cancel</button>
+                <button class="btn btn-primary dialog-confirm" onclick="window.location.href='mailto:admin@acelbyte.com'; hideDialog('emailDialog')">Open Email</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="whatsappDialog" class="dialog-overlay">
+            <div class="dialog-box">
+                <h3 class="dialog-title">Message on WhatsApp</h3>
+                <p class="dialog-message">Would you like to start a WhatsApp conversation?</p>
+                <div class="dialog-buttons">
+                    <button class="btn btn-secondary dialog-cancel" onclick="hideDialog('whatsappDialog')">Cancel</button>
+                    <button class="btn btn-primary dialog-confirm" onclick="window.open('https://wa.me/628170737998', '_blank'); hideDialog('whatsappDialog')">Open WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    
+    <div id="instagramDialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <h3 class="dialog-title">Follow on Instagram</h3>
+            <p class="dialog-message">Would you like to visit my Instagram profile to follow?</p>
+            <div class="dialog-buttons">
+                <button class="btn btn-secondary dialog-cancel" onclick="hideDialog('instagramDialog')">Cancel</button>
+                <button class="btn btn-primary dialog-confirm" onclick="window.open('https://instagram.com/acelbyte', '_blank'); hideDialog('instagramDialog')">Visit Instagram</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="calendlyDialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <h3 class="dialog-title">Book Meeting on Calendly</h3>
+            <p class="dialog-message">Would you like to open Calendly to book a meeting at your convenience?</p>
+            <div class="dialog-buttons">
+                <button class="btn btn-secondary dialog-cancel" onclick="hideDialog('calendlyDialog')">Cancel</button>
+                <button class="btn btn-primary dialog-confirm" onclick="window.open('https://calendly.com/acelbyte', '_blank'); hideDialog('calendlyDialog')">Open Calendly</button>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Particle system
@@ -1572,134 +1700,6 @@ permalink: /privacy-policy
                         entry.target.classList.remove('visible');
                     }
                 });
-
-        // Comprehensive Download Protection and Developer Tools Prevention
-        document.addEventListener('DOMContentLoaded', function() {
-            // Disable right-click context menu
-            document.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-                return false;
-            });
-
-            // Disable drag and drop
-            document.addEventListener('dragstart', function(e) {
-                e.preventDefault();
-                return false;
-            });
-
-            // Disable text selection
-            document.addEventListener('selectstart', function(e) {
-                e.preventDefault();
-                return false;
-            });
-
-            // Disable keyboard shortcuts
-            document.addEventListener('keydown', function(e) {
-                // Disable F12 (Developer Tools)
-                if (e.key === 'F12') {
-                    e.preventDefault();
-                    return false;
-                }
-                
-                // Disable Ctrl+Shift+I (Developer Tools)
-                if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                    e.preventDefault();
-                    return false;
-                }
-                
-                // Disable Ctrl+Shift+J (Console)
-                if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                    e.preventDefault();
-                    return false;
-                }
-                
-                // Disable Ctrl+U (View Source)
-                if (e.ctrlKey && e.key === 'u') {
-                    e.preventDefault();
-                    return false;
-                }
-                
-                // Disable Ctrl+S (Save Page)
-                if (e.ctrlKey && e.key === 's') {
-                    e.preventDefault();
-                    return false;
-                }
-                
-                // Disable Ctrl+A (Select All)
-                if (e.ctrlKey && e.key === 'a') {
-                    e.preventDefault();
-                    return false;
-                }
-                
-                // Disable Ctrl+P (Print)
-                if (e.ctrlKey && e.key === 'p') {
-                    e.preventDefault();
-                    return false;
-                }
-                
-                // Disable Print Screen
-                if (e.key === 'PrintScreen') {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-
-            // Developer Tools Detection
-            let devtools = {
-                open: false,
-                orientation: null
-            };
-            
-            const threshold = 160;
-            
-            setInterval(function() {
-                if (window.outerHeight - window.innerHeight > threshold || 
-                    window.outerWidth - window.innerWidth > threshold) {
-                    if (!devtools.open) {
-                        devtools.open = true;
-                        // Replace page content when developer tools are detected
-                        document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #000; color: #fff; font-family: Arial, sans-serif; font-size: 24px;">Developer tools detected. Please close them to continue using the website and restart the browser</div>';
-                    }
-                } else {
-                    devtools.open = false;
-                }
-            }, 500);
-
-            // Disable image dragging
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                img.addEventListener('dragstart', function(e) {
-                    e.preventDefault();
-                    return false;
-                });
-                img.style.userSelect = 'none';
-                img.style.webkitUserSelect = 'none';
-                img.style.mozUserSelect = 'none';
-                img.style.msUserSelect = 'none';
-            });
-
-            // Additional protection for CSS
-            const style = document.createElement('style');
-            style.textContent = `
-                * {
-                    -webkit-user-select: none !important;
-                    -moz-user-select: none !important;
-                    -ms-user-select: none !important;
-                    user-select: none !important;
-                    -webkit-touch-callout: none !important;
-                    -webkit-tap-highlight-color: transparent !important;
-                }
-                img {
-                    pointer-events: none !important;
-                    -webkit-user-drag: none !important;
-                    -khtml-user-drag: none !important;
-                    -moz-user-drag: none !important;
-                    -o-user-drag: none !important;
-                    user-drag: none !important;
-                }
-            `;
-            document.head.appendChild(style);
-        });
             }, {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -1857,6 +1857,136 @@ permalink: /privacy-policy
                     navMenu.classList.remove('active');
                 }
             });
+
+            // Remove active state from all nav links to ensure none appear selected
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+        });
+        
+        // Dialog functions
+        function showEmailDialog() {
+            const dialog = document.getElementById('emailDialog');
+            dialog.style.display = 'flex';
+        }
+        
+        function showWhatsAppDialog() {
+            const dialog = document.getElementById('whatsappDialog');
+            dialog.style.display = 'flex';
+        }
+        
+        function showInstagramDialog() {
+            const dialog = document.getElementById('instagramDialog');
+            dialog.style.display = 'flex';
+        }
+        
+        function showCalendlyDialog() {
+            const dialog = document.getElementById('calendlyDialog');
+            dialog.style.display = 'flex';
+        }
+        
+        function hideDialog(dialogId) {
+            const dialog = document.getElementById(dialogId);
+            dialog.style.display = 'none';
+        }
+        
+        // Close dialog when clicking outside
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('dialog-overlay')) {
+                event.target.style.display = 'none';
+            }
+        });
+
+        // Comprehensive Download Protection and Developer Tools Prevention
+        document.addEventListener('DOMContentLoaded', function() {
+            // Disable right-click context menu
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Disable drag and drop
+            document.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Disable text selection
+            document.addEventListener('selectstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Disable keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                // Disable F12 (Developer Tools)
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+Shift+I (Developer Tools)
+                if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+Shift+J (Console)
+                if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+U (View Source)
+                if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+S (Save Page)
+                if (e.ctrlKey && e.key === 's') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+A (Select All)
+                if (e.ctrlKey && e.key === 'a') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+P (Print)
+                if (e.ctrlKey && e.key === 'p') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Print Screen
+                if (e.key === 'PrintScreen') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // Developer Tools Detection
+            let devtools = {
+                open: false,
+                orientation: null
+            };
+            
+            const threshold = 160;
+            
+            setInterval(function() {
+                if (window.outerHeight - window.innerHeight > threshold || 
+                    window.outerWidth - window.innerWidth > threshold) {
+                    if (!devtools.open) {
+                        devtools.open = true;
+                        document.body.innerHTML = '<div style="position:fixed;top:0;left:0;width:100%;height:100%;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;z-index:99999;">Developer tools detected. Please close them to continue using the website and restart the browser</div>';
+
+
+                    }
+                }
+            }, 500);
         });
     </script>
     </div> <!-- End Main Content -->
